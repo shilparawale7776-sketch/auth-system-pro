@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth System Pro</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container" id="container">
+
+    <!-- Login Form -->
+    <div class="form-container login-container">
+
+      <h2>Login</h2>
+      <p class="subtitle">Welcome Back 👋</p>
+
+      <input
+        type="email"
+        id="loginEmail"
+        placeholder="Enter Email"
+      >
+
+      <div class="pass-box">
+        <input
+          type="password"
+          id="loginPass"
+          placeholder="Enter Password"
+        >
+
+        <i class="fa-solid fa-eye"
+           onclick="togglePass('loginPass',this)">
+        </i>
+      </div>
+
+      <button onclick="login()">
+        Login
+      </button>
+
+    </div>
+
+    <!-- Register Form -->
+    <div class="form-container register-container">
+
+      <h2>Create Account</h2>
+      <p class="subtitle">
+        Create your account 🚀
+      </p>
+
+      <input
+        type="text"
+        id="regName"
+        placeholder="Full Name"
+      >
+      <small id="nameErr"></small>
+
+      <input
+        type="email"
+        id="regEmail"
+        placeholder="Email Address"
+      >
+      <small id="emailErr"></small>
+
+      <div class="pass-box">
+        <input
+          type="password"
+          id="regPass"
+          placeholder="Create Password"
+        >
+
+        <i class="fa-solid fa-eye"
+           onclick="togglePass('regPass',this)">
+        </i>
+      </div>
+
+      <div id="strength"></div>
+
+      <div class="pass-box">
+        <input
+          type="password"
+          id="confirmPass"
+          placeholder="Confirm Password"
+        >
+
+        <i class="fa-solid fa-eye"
+           onclick="togglePass('confirmPass',this)">
+        </i>
+      </div>
+
+      <small id="passErr"></small>
+
+      <button onclick="register()">
+        Create Account
+      </button>
+
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay-container">
+
+      <h2 id="title">
+        Welcome Back 🔥
+      </h2>
+
+      <p id="desc">
+        Login to continue
+      </p>
+
+      <button onclick="toggle()">
+        Switch
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- Toast Message -->
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
